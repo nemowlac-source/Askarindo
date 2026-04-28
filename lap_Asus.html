@@ -1,0 +1,1556 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asus BG1408CVA - EB7110W</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="logoaskarindo1-removebg-preview.png"
+    />
+    <link
+      href="https://fonts.bunny.net/css?family=montserrat:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --font: "Montserrat", "Century Gothic", "Trebuchet MS", sans-serif;
+        --font-footer:
+          "Avenir", "Avenir Next", "Century Gothic", "Trebuchet MS", sans-serif;
+        --primary: #2b7a8c;
+        --primary-light: #3b96a9;
+        --bg-page: #000000;
+        --bg-grad-b: #0d3d47;
+        --header-bg: rgba(0, 0, 0, 0.95);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --txt-1: #ffffff;
+        --txt-2: #cccccc;
+        --txt-3: #aaaaaa;
+        --card-bg: rgba(255, 255, 255, 0.04);
+        --card-border: rgba(255, 255, 255, 0.08);
+        --pill-bg: rgba(255, 255, 255, 0.09);
+        --pill-border: rgba(255, 255, 255, 0.12);
+        --price: #3b96a9;
+        --footer-bg: rgba(0, 0, 0, 0.8);
+        --footer-border: rgba(255, 255, 255, 0.12);
+        --footer-sep: rgba(255, 255, 255, 0.08);
+        --footer-txt: #aaaaaa;
+        --footer-link: #aaaaaa;
+        --footer-link-h: #3b96a9;
+        --footer-title: #ffffff;
+      }
+      body.light {
+        --bg-page: #ffffff;
+        --bg-grad-b: #e8f4f7;
+        --header-bg: rgba(255, 255, 255, 0.92);
+        --header-border: rgba(0, 0, 0, 0.08);
+        --txt-1: #0a0a0a;
+        --txt-2: #2a2a2a;
+        --txt-3: #555555;
+        --card-bg: rgba(0, 0, 0, 0.03);
+        --card-border: rgba(0, 0, 0, 0.08);
+        --pill-bg: rgba(0, 0, 0, 0.06);
+        --pill-border: rgba(0, 0, 0, 0.1);
+        --price: #2b7a8c;
+        --footer-bg: #111111;
+        --footer-border: rgba(255, 255, 255, 0.08);
+        --footer-sep: rgba(255, 255, 255, 0.06);
+        --footer-txt: #888888;
+        --footer-link: #888888;
+        --footer-link-h: #3b96a9;
+        --footer-title: #ffffff;
+      }
+      @media (prefers-color-scheme: light) {
+        body:not(.dark):not(.light) {
+          --bg-page: #ffffff;
+          --bg-grad-b: #e8f4f7;
+          --header-bg: rgba(255, 255, 255, 0.92);
+          --header-border: rgba(0, 0, 0, 0.08);
+          --txt-1: #0a0a0a;
+          --txt-2: #2a2a2a;
+          --txt-3: #555555;
+          --card-bg: rgba(0, 0, 0, 0.03);
+          --card-border: rgba(0, 0, 0, 0.08);
+          --pill-bg: rgba(0, 0, 0, 0.06);
+          --pill-border: rgba(0, 0, 0, 0.1);
+          --price: #2b7a8c;
+          --footer-bg: #111111;
+          --footer-border: rgba(255, 255, 255, 0.08);
+          --footer-sep: rgba(255, 255, 255, 0.06);
+          --footer-txt: #888888;
+          --footer-link: #888888;
+          --footer-link-h: #3b96a9;
+          --footer-title: #ffffff;
+        }
+      }
+
+      @font-face {
+        font-family: "Avenir";
+        src: local("Avenir Next"), local("Avenir"), local("Century Gothic");
+        font-weight: 300;
+      }
+      @font-face {
+        font-family: "Avenir";
+        src:
+          local("Avenir Next Medium"), local("Avenir Medium"),
+          local("Century Gothic");
+        font-weight: 400 500;
+      }
+      @font-face {
+        font-family: "Avenir";
+        src:
+          local("Avenir Next Demi Bold"), local("Avenir Heavy"),
+          local("Century Gothic Bold");
+        font-weight: 600 700;
+      }
+      @font-face {
+        font-family: "Avenir";
+        src:
+          local("Avenir Next Heavy"), local("Avenir Black"),
+          local("Century Gothic Bold");
+        font-weight: 800 900;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--font);
+        background: var(--bg-page);
+        color: var(--txt-1);
+        overflow-x: hidden;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      #animated-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background: linear-gradient(
+          135deg,
+          var(--bg-page) 0%,
+          var(--bg-grad-b) 50%,
+          var(--bg-page) 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 18s ease infinite;
+        transition: background 0.3s;
+      }
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      #particles {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(43, 122, 140, 0.4);
+        border-radius: 50%;
+        animation: floatParticle 20s infinite linear;
+      }
+      @keyframes floatParticle {
+        0% {
+          transform: translateY(100vh);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.6;
+        }
+        90% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-100vh) translateX(80px);
+          opacity: 0;
+        }
+      }
+
+      /* ── HEADER ── */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: var(--header-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--header-border);
+        z-index: 9999;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      nav {
+        max-width: 1400px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        gap: 20px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+      .logo img {
+        height: 70px;
+        width: auto;
+      }
+      .logo span {
+        font-family: var(--font);
+        font-size: 28px;
+        font-weight: 800;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .back-link {
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--txt-3);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 18px;
+        border-radius: 50px;
+        border: 1px solid var(--card-border);
+        transition:
+          color 0.25s,
+          border-color 0.25s,
+          background 0.25s;
+      }
+      .back-link:hover {
+        color: var(--primary-light);
+        border-color: var(--primary-light);
+        background: rgba(43, 122, 140, 0.08);
+      }
+      .appearance-toggle {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        background: var(--pill-bg);
+        border: 1px solid var(--pill-border);
+        border-radius: 999px;
+        padding: 4px 5px;
+        flex-shrink: 0;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      .appearance-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: var(--txt-3);
+        transition:
+          background 0.2s,
+          color 0.2s,
+          box-shadow 0.2s;
+      }
+      .appearance-btn:hover {
+        background: var(--card-bg);
+        color: var(--txt-1);
+      }
+      .appearance-btn.active {
+        background: #3b96a9;
+        color: #fff;
+        box-shadow: 0 2px 10px rgba(59, 150, 169, 0.45);
+      }
+
+      /* ── MAIN LAYOUT ── */
+      .product-detail {
+        max-width: 1400px;
+        margin: 100px auto 80px;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 56px;
+        align-items: start;
+      }
+
+      /* ── IMAGE SLIDER ── */
+      .slider-wrap {
+        position: relative;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--card-border);
+        border-radius: 32px;
+        overflow: hidden;
+        padding: 28px 0 0;
+        user-select: none;
+      }
+      .slider-viewport {
+        overflow: hidden;
+        cursor: grab;
+      }
+      .slider-viewport:active {
+        cursor: grabbing;
+      }
+      .slider-track {
+        display: flex;
+        transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+      }
+      .slide {
+        flex: 0 0 100%;
+        padding: 10px 30px 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide img {
+        width: 100%;
+        height: 260px;
+        object-fit: contain;
+        filter: drop-shadow(0 16px 40px rgba(43, 122, 140, 0.35));
+        pointer-events: none;
+        animation: imgFloat 6s ease-in-out infinite;
+      }
+      @keyframes imgFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+
+      .slider-progress {
+        display: none;
+      }
+
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        color: var(--txt-2);
+        font-size: 0.85rem;
+        transition: all 0.25s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .slider-btn:hover {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .slider-btn.prev {
+        left: 12px;
+      }
+      .slider-btn.next {
+        right: 12px;
+      }
+
+      .slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 16px;
+        margin: 12px auto 24px;
+        width: 220px;
+        height: 28px;
+        border: 1px solid var(--card-border);
+        border-radius: 999px;
+        background: var(--card-bg);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        overflow: hidden;
+      }
+
+      .slider-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: all 0.35s;
+        padding: 0;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slider-dot::after {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--card-border);
+        transition: all 0.35s;
+      }
+      .slider-dot.near2::after {
+        width: 6px;
+        height: 6px;
+        background: rgba(43, 122, 140, 0.25);
+      }
+      .slider-dot.near::after {
+        width: 8px;
+        height: 8px;
+        background: rgba(43, 122, 140, 0.45);
+      }
+      .slider-dot.active::after {
+        width: 11px;
+        height: 11px;
+        background: var(--primary);
+      }
+
+      /* ── PRODUCT INFO ── */
+      .product-info {
+        padding-top: 10px;
+      }
+      .prod-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--primary-light);
+        background: rgba(43, 122, 140, 0.12);
+        border: 1px solid rgba(43, 122, 140, 0.3);
+        padding: 7px 18px;
+        border-radius: 999px;
+        margin-bottom: 22px;
+      }
+      .product-info h1 {
+        font-family: var(--font);
+        font-size: clamp(36px, 5vw, 64px);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        background: linear-gradient(135deg, var(--txt-1), var(--primary-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .product-info .tagline {
+        font-family: var(--font);
+        font-size: 17px;
+        color: var(--txt-3);
+        line-height: 1.6;
+        margin-bottom: 28px;
+      }
+
+      /* ── SPEC ACCORDION ── */
+      .spec-accordion {
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .spec-group {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--card-border);
+        background: var(--card-bg);
+        transition: border-color 0.3s;
+      }
+      .spec-group:has(.spec-group-header.active) {
+        border-color: rgba(43, 122, 140, 0.4);
+      }
+      .spec-group-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font);
+        color: var(--txt-1);
+        transition: background 0.25s;
+      }
+      .spec-group-header:hover {
+        background: rgba(43, 122, 140, 0.08);
+      }
+      .spec-group-header.active {
+        background: rgba(43, 122, 140, 0.12);
+      }
+      .spec-group-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(43, 122, 140, 0.15);
+        color: var(--primary-light);
+        font-size: 14px;
+      }
+      .spec-group-title {
+        font-size: 14px;
+        font-weight: 700;
+        flex: 1;
+        text-align: left;
+      }
+      .spec-chevron {
+        font-size: 11px;
+        color: var(--txt-3);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .spec-group-header.active .spec-chevron {
+        transform: rotate(180deg);
+      }
+      .spec-group-body {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.4s;
+        padding: 0 20px;
+      }
+      .spec-group-body.open {
+        max-height: 800px;
+        padding: 0 20px 16px;
+      }
+      .spec-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--card-border);
+        gap: 20px;
+      }
+      .spec-item:last-child {
+        border-bottom: none;
+      }
+      .spec-label {
+        font-family: var(--font);
+        font-size: 13px;
+        color: var(--txt-3);
+        font-weight: 500;
+        flex-shrink: 0;
+      }
+      .spec-value {
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--txt-1);
+        text-align: right;
+      }
+
+      /* Feature pills */
+      .feature-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 0 4px;
+      }
+      .fpill {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font);
+        font-size: 12px;
+        font-weight: 600;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(59, 150, 169, 0.25);
+        color: var(--primary-light);
+        background: rgba(43, 122, 140, 0.08);
+        transition: all 0.25s;
+      }
+      .fpill:hover {
+        border-color: var(--primary-light);
+        background: rgba(43, 122, 140, 0.18);
+        transform: translateY(-2px);
+      }
+      .fpill i {
+        font-size: 11px;
+      }
+
+      /* Use-case list */
+      .usecase-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 8px 0 4px;
+      }
+      .usecase-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-family: var(--font);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--txt-2);
+      }
+      .usecase-item i {
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(43, 122, 140, 0.12);
+        color: var(--primary-light);
+        font-size: 14px;
+      }
+
+      /* Conclusion */
+      .conclusion-box {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        background: rgba(43, 122, 140, 0.08);
+        border: 1px solid rgba(43, 122, 140, 0.25);
+        border-radius: 18px;
+        padding: 20px 22px;
+        margin-bottom: 32px;
+      }
+      .conclusion-icon {
+        font-size: 22px;
+        color: var(--primary-light);
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .conclusion-box p {
+        font-family: var(--font);
+        font-size: 13px;
+        line-height: 1.75;
+        color: var(--txt-2);
+      }
+      .conclusion-box strong {
+        color: var(--primary-light);
+      }
+
+      /* CTA */
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+      }
+      .btn-primary {
+        flex: 1;
+        padding: 18px 30px;
+        background: linear-gradient(135deg, #2b7a8c, #3b96a9);
+        color: #fff;
+        border-radius: 50px;
+        font-family: var(--font);
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 16px 40px rgba(43, 122, 140, 0.4);
+        transition: all 0.4s;
+      }
+      .btn-primary:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 60px rgba(43, 122, 140, 0.6);
+      }
+      .btn-secondary {
+        flex: 1;
+        padding: 18px 30px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        color: var(--txt-2);
+        border-radius: 50px;
+        font-family: var(--font);
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.4s;
+      }
+      .btn-secondary:hover {
+        border-color: var(--primary-light);
+        color: var(--primary-light);
+        transform: translateY(-4px);
+      }
+
+      /* ── DESCRIPTION ── */
+      .description {
+        max-width: 1400px;
+        margin: 0 auto 100px;
+        padding: 0 40px;
+        text-align: center;
+      }
+      .description h2 {
+        font-family: var(--font);
+        font-size: clamp(32px, 4vw, 52px);
+        font-weight: 900;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, var(--txt-1), var(--primary-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .description p {
+        font-family: var(--font);
+        font-size: 17px;
+        line-height: 1.8;
+        color: var(--txt-3);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* ── RELATED ── */
+      .related {
+        max-width: 1400px;
+        margin: 0 auto 120px;
+        padding: 0 40px;
+      }
+      .related h2 {
+        font-family: var(--font);
+        font-size: clamp(32px, 4vw, 52px);
+        font-weight: 900;
+        margin-bottom: 50px;
+        text-align: center;
+        background: linear-gradient(135deg, var(--txt-1), var(--primary-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+      }
+      .related-item {
+        padding: 30px 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 28px;
+        text-align: center;
+        transition: all 0.4s;
+      }
+      .related-item:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary);
+        box-shadow: 0 24px 60px rgba(43, 122, 140, 0.2);
+      }
+      .related-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 18px;
+      }
+      .related-item h3 {
+        font-family: var(--font);
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--txt-1);
+      }
+      .related-item .rel-price {
+        font-family: var(--font);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--price);
+        margin-bottom: 20px;
+      }
+      .related-item a {
+        padding: 12px 28px;
+        background: linear-gradient(135deg, #2b7a8c, #3b96a9);
+        color: #fff;
+        border-radius: 50px;
+        text-decoration: none;
+        font-family: var(--font);
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+      .related-item a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(43, 122, 140, 0.4);
+      }
+
+      /* ══ FOOTER ══ */
+      footer {
+        background: var(--footer-bg);
+        border-top: 1px solid var(--footer-border);
+        padding: 80px 40px 30px;
+        margin-top: 100px;
+        transition:
+          background 0.3s,
+          border-color 0.3s;
+      }
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto 50px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 60px;
+      }
+      .footer-section h3 {
+        font-family: var(--font-footer);
+        font-size: 28px;
+        font-weight: 800;
+        background: linear-gradient(135deg, #2b7a8c, #3b96a9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+      }
+      .footer-section h4 {
+        font-family: var(--font-footer);
+        font-size: 18px;
+        color: var(--footer-title);
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .footer-section p {
+        font-family: var(--font-footer);
+        color: var(--footer-txt);
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+      .footer-section ul {
+        list-style: none;
+      }
+      .footer-section ul li {
+        font-family: var(--font-footer);
+        margin-bottom: 12px;
+        color: var(--footer-txt);
+      }
+      .footer-section ul li a {
+        font-family: var(--font-footer);
+        color: var(--footer-link);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer-section ul li a:hover {
+        color: var(--footer-link-h);
+      }
+      .footer-section ul li i {
+        color: #2b7a8c;
+        margin-right: 10px;
+        width: 20px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+      .social-icons a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: white;
+        background: #2b7a8c;
+        box-shadow: 0 5px 20px rgba(43, 122, 140, 0.4);
+        transition: all 0.4s ease;
+        text-decoration: none;
+      }
+      .social-icons a:hover {
+        background: #3b96a9;
+        transform: translateY(-8px) scale(1.1);
+      }
+      .footer-bottom {
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid var(--footer-sep);
+        color: var(--footer-txt);
+      }
+      .footer-bottom p {
+        font-family: var(--font-footer);
+        margin: 8px 0;
+        font-size: 14px;
+      }
+
+      /* ── WA FLOAT ── */
+      .wa-wrapper {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        z-index: 9998;
+      }
+      .wa-bubble {
+        position: relative;
+        background: #2b7a8c;
+        color: #fff;
+        padding: 13px 18px;
+        border-radius: 16px 16px 4px 16px;
+        font-family: var(--font);
+        font-size: 13.5px;
+        font-weight: 600;
+        line-height: 1.5;
+        white-space: nowrap;
+        box-shadow: 0 8px 28px rgba(43, 122, 140, 0.5);
+        opacity: 0;
+        transform: translateX(14px) scale(0.9);
+        transform-origin: right center;
+        pointer-events: none;
+        transition:
+          opacity 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+          transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .wa-bubble::after {
+        content: "";
+        position: absolute;
+        right: -8px;
+        bottom: 12px;
+        border-width: 6px 0 6px 9px;
+        border-style: solid;
+        border-color: transparent transparent transparent #2b7a8c;
+      }
+      .wa-float {
+        width: 70px;
+        height: 70px;
+        background: #25d366;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        box-shadow: 0 10px 40px rgba(37, 211, 102, 0.6);
+        text-decoration: none;
+        flex-shrink: 0;
+        animation: floatBtn 3s ease-in-out infinite;
+      }
+      .wa-wrapper:hover .wa-float {
+        animation: none;
+        transform: scale(1.1);
+      }
+      .wa-wrapper:hover .wa-bubble {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        pointer-events: auto;
+      }
+      @keyframes floatBtn {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .product-detail {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          margin-top: 100px;
+        }
+        nav {
+          padding: 0 20px;
+        }
+        .logo span {
+          font-size: 20px;
+        }
+        .logo img {
+          height: 50px;
+        }
+        .footer-content {
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+      }
+      @media (max-width: 768px) {
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+      @media (max-width: 600px) {
+        .product-detail {
+          padding: 0 20px;
+        }
+        .description,
+        .related {
+          padding: 0 20px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+        }
+        footer {
+          padding: 60px 20px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animated-bg"></div>
+    <div id="particles"></div>
+
+    <!-- ═══ HEADER ═══ -->
+    <header>
+      <nav>
+        <a class="logo" href="produk.html">
+          <img src="logoaskarindo1-removebg-preview.png" alt="Askarindo Logo" />
+          <span>Askarindogroup</span>
+        </a>
+        <div class="nav-right">
+          <a href="produk.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Kembali ke Produk
+          </a>
+          <div
+            class="appearance-toggle"
+            role="group"
+            aria-label="Pilih tema tampilan"
+          >
+            <button
+              class="appearance-btn"
+              data-theme="light"
+              title="Tema Terang"
+            >
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="appearance-btn" data-theme="dark" title="Tema Gelap">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button
+              class="appearance-btn"
+              data-theme="system"
+              title="Ikut Sistem"
+            >
+              <i class="fas fa-desktop"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ═══ PRODUCT DETAIL ═══ -->
+    <div class="product-detail">
+      <!-- IMAGE SLIDER -->
+      <div class="slider-wrap">
+        <div
+          class="slider-viewport"
+          id="sliderViewport"
+          style="position: relative"
+        >
+          <button class="slider-btn prev" id="btnPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-track" id="sliderTrack">
+            <div class="slide">
+              <img
+                src="assets/img/asus_expertbook/bg1408_workstation.png"
+                alt="Asus BG1408CVA - Workstation Mobile"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="assets/img/asus_expertbook/bg1408_gpu.png"
+                alt="Asus BG1408CVA - NVIDIA RTX A2000"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="assets/img/asus_expertbook/bg1408_ports.png"
+                alt="Asus BG1408CVA - I/O Ports"
+              />
+            </div>
+          </div>
+          <button class="slider-btn next" id="btnNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="slider-dots" id="sliderDots"></div>
+      </div>
+
+      <!-- PRODUCT INFO -->
+      <div class="product-info">
+        <div class="prod-eyebrow">
+          <i class="fas fa-laptop-medical"></i> Mobile Workstation · Pro
+          Graphics · Enterprise Ready
+        </div>
+        <h1>Asus BG1408CVA - EB7110W</h1>
+        <p class="tagline">
+          Workstation mobile dengan prosesor Intel Core i7 generasi terbaru dan
+          grafis NVIDIA RTX A2000, dirancang untuk rendering 3D ringan, desain
+          grafis, serta multitasking profesional.
+        </p>
+
+        <div class="spec-accordion">
+          <!-- 1. Tampilan & Visual -->
+          <div class="spec-group">
+            <button
+              class="spec-group-header active"
+              onclick="toggleGroup(this)"
+            >
+              <span class="spec-group-icon"
+                ><i class="fas fa-desktop"></i
+              ></span>
+              <span class="spec-group-title">Tampilan &amp; Visual</span>
+              <i class="fas fa-chevron-down spec-chevron"></i>
+            </button>
+            <div class="spec-group-body open">
+              <div class="spec-item">
+                <span class="spec-label">Ukuran Layar</span
+                ><span class="spec-value">14" NanoEdge Display</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Resolusi</span
+                ><span class="spec-value">Full HD (1920 x 1080)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Tipe Panel</span
+                ><span class="spec-value">IPS-Level · Anti-Glare</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Viewing Angle</span
+                ><span class="spec-value">178° Wide-View</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Sistem & Performa -->
+          <div class="spec-group">
+            <button class="spec-group-header" onclick="toggleGroup(this)">
+              <span class="spec-group-icon"
+                ><i class="fas fa-microchip"></i
+              ></span>
+              <span class="spec-group-title">Sistem &amp; Performa</span>
+              <i class="fas fa-chevron-down spec-chevron"></i>
+            </button>
+            <div class="spec-group-body">
+              <div class="spec-item">
+                <span class="spec-label">Prosesor</span
+                ><span class="spec-value">Intel® Core™ i7-1355U</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Grafis</span
+                ><span class="spec-value">NVIDIA® RTX™ A2000 Laptop GPU</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">RAM</span
+                ><span class="spec-value">16GB DDR4 (Upgradable)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Storage</span
+                ><span class="spec-value">1TB SSD PCIe 4.0 NVMe</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Fitur Unggulan -->
+          <div class="spec-group">
+            <button class="spec-group-header" onclick="toggleGroup(this)">
+              <span class="spec-group-icon"><i class="fas fa-star"></i></span>
+              <span class="spec-group-title">Fitur Unggulan</span>
+              <i class="fas fa-chevron-down spec-chevron"></i>
+            </button>
+            <div class="spec-group-body">
+              <div class="feature-pills">
+                <span class="fpill"
+                  ><i class="fas fa-cube"></i> ISV Certified Graphics</span
+                >
+                <span class="fpill"
+                  ><i class="fas fa-shield-alt"></i> Military Grade
+                  Durability</span
+                >
+                <span class="fpill"
+                  ><i class="fas fa-fingerprint"></i> Fingerprint Security</span
+                >
+                <span class="fpill"
+                  ><i class="fas fa-bolt"></i> Fast Charging Support</span
+                >
+                <span class="fpill"
+                  ><i class="fas fa-certificate"></i> TKDN + BMP 41%</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Cocok Untuk -->
+          <div class="spec-group">
+            <button class="spec-group-header" onclick="toggleGroup(this)">
+              <span class="spec-group-icon"
+                ><i class="fas fa-briefcase"></i
+              ></span>
+              <span class="spec-group-title">Cocok Untuk</span>
+              <i class="fas fa-chevron-down spec-chevron"></i>
+            </button>
+            <div class="spec-group-body">
+              <div class="usecase-list">
+                <div class="usecase-item">
+                  <i class="fas fa-pencil-ruler"></i
+                  ><span>Desain Grafis & Modeling 3D</span>
+                </div>
+                <div class="usecase-item">
+                  <i class="fas fa-display"></i
+                  ><span>Eksekutif & Presentasi Bisnis</span>
+                </div>
+                <div class="usecase-item">
+                  <i class="fas fa-laptop-code"></i
+                  ><span>Engineers & Multimedia Editor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONCLUSION -->
+        <div class="conclusion-box">
+          <div class="conclusion-icon"><i class="fas fa-check-circle"></i></div>
+          <p>
+            <strong>Asus BG1408CVA - EB7110W</strong> adalah solusi mobile
+            workstation yang tangguh dan bertenaga. Dengan perpaduan
+            <strong>Intel Core i7</strong> dan
+            <strong>NVIDIA RTX A2000</strong>, laptop ini siap menunjang
+            kreativitas profesional Anda mulai dari desain grafis hingga
+            rendering 3D dalam form factor yang tetap portabel. Penawaran Khusus
+            — Askarindo Group ⚡
+          </p>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="https://wa.me" class="btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Hubungi Sales
+          </a>
+          <a href="https://wa.me" class="btn-secondary" target="_blank">
+            Minta Penawaran
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ DESCRIPTION ═══ -->
+    <section class="description">
+      <h2>Mengapa Asus BG1408CVA - EB7110W</h2>
+      <p>
+        Didesain untuk profesional yang membutuhkan performa workstation dalam
+        perjalanan, Asus BG1408CVA mengusung kartu grafis
+        <strong style="color: var(--primary-light)">NVIDIA® RTX™ A2000</strong>
+        yang dioptimalkan untuk aplikasi arsitektur dan desain. Prosesor
+        <strong style="color: var(--primary-light)">Intel® Core™ i7</strong>
+        memastikan alur kerja multitasking Anda tetap lancar tanpa hambatan.
+        Didukung dengan sertifikasi
+        <strong style="color: var(--primary-light)">TKDN + BMP 41%</strong> dan
+        ketahanan standar militer, laptop ini adalah pilihan investasi jangka
+        panjang yang aman dan andal bagi korporasi maupun instansi pemerintah.
+      </p>
+    </section>
+
+    <!-- ═══ RELATED ═══ -->
+    <section class="related">
+      <h2>Produk Terkait</h2>
+      <div class="related-grid">
+        <div class="related-item">
+          <img
+            src="https://images.acer.com/is/image/acer/TravelMate%20P2%2014-VibraD5-MTH-AGW-KSP-6:KSP-with-Specs-L"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://www.viewsonic.com/globalassets/images/products/ifp7550-3/ifp7550-3-hero-image.png';
+            "
+            alt="ViewSonic G1"
+          />
+          <h3>Acer Travelmate P214</h3>
+          <div class="rel-price">Hubungi Kami</div>
+          <a href="lap_Acer.html">Lihat Detail</a>
+        </div>
+        <div class="related-item">
+          <img
+            src="assets/img_ifp/samsung_flip_pro/id-smart-signage-wm55b-b2c-lh55wmbwbgcxxd-538797981.avif"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://images.samsung.com/is/image/samsung/p6pim/id/wm85b/gallery/id-flip-pro-wm85b-lh85wmbwlgcxxd-537272-lh85wmbwlgcxxd-537272?$650_519_PNG$';
+            "
+            alt="Samsung Flip Pro WABD"
+          />
+          <h3>Samsung Flip Pro WABD</h3>
+          <div class="rel-price">Hubungi Kami</div>
+          <a href="ifp_samsung_flip_pro_tkdn.html">Lihat Detail</a>
+        </div>
+        <div class="related-item">
+          <img
+            src="assets/img_ifp/samsung_waf/id-interactive-display-waf-lh75wafwlgcxxs-550066459.avif"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://images.samsung.com/is/image/samsung/p6pim/id/wm85b/gallery/id-flip-pro-wm85b-lh85wmbwlgcxxd-537272-lh85wmbwlgcxxd-537272?$650_519_PNG$';
+            "
+            alt="Samsung WAF"
+          />
+          <h3>Samsung Series WAF</h3>
+          <div class="rel-price">Hubungi Kami</div>
+          <a href="ifp_samsung-waf.html">Lihat Detail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Askarindogroup</h3>
+          <p>
+            Penyedia solusi teknologi terintegrasi terpercaya untuk pendidikan,
+            bisnis, dan pemerintahan di Indonesia sejak 2023.
+          </p>
+          <div class="social-icons">
+            <a
+              href="https://instagram.com/askarindogroup"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="/cdn-cgi/l/email-protection#c3a2b0a8a2b1aaada7acaaadb7a6a4b1a2b0aaa4b1acb6b383a4aea2aaafeda0acae"
+              aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a
+              href="https://wa.me/6285854542007"
+              target="_blank"
+              rel="noopener"
+              aria-label="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Tentang Kami</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#">Konsultasi Gratis</a></li>
+            <li><a href="#">Instalasi &amp; Setup</a></li>
+            <li><a href="#">Pelatihan Pengguna</a></li>
+            <li><a href="#">Maintenance</a></li>
+            <li><a href="#">Garansi &amp; Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Hubungi Kami</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +62 858-5454-2007</li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a
+                href="/cdn-cgi/l/email-protection"
+                class="__cf_email__"
+                data-cfemail="93f2e0f8f2e1fafdf7fcfafde7f6f4e1f2e0faf4e1fce6e3d3f4fef2faffbdf0fcfe"
+                >[email&#160;protected]</a
+              >
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> Kota Surabaya, Indonesia
+            </li>
+            <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Askarindogroup. All rights reserved.</p>
+        <p>Solusi Teknologi Terintegrasi untuk Indonesia</p>
+      </div>
+    </footer>
+
+    <!-- WA FLOAT -->
+    <div class="wa-wrapper">
+      <div class="wa-bubble">
+        Order &amp; Konsultasi<br />via WhatsApp<br /><strong
+          >Klik Di Sini!</strong
+        >
+      </div>
+      <a
+        href="https://wa.me/6285854542007"
+        target="_blank"
+        class="wa-float"
+        aria-label="Chat WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      function toggleGroup(btn) {
+        const body = btn.nextElementSibling;
+        const isOpen = body.classList.contains("open");
+        body.classList.toggle("open", !isOpen);
+        btn.classList.toggle("active", !isOpen);
+      }
+
+      const body = document.body;
+      const sysMQ = window.matchMedia("(prefers-color-scheme: dark)");
+      const btns = document.querySelectorAll(".appearance-btn");
+      function applyTheme(pref) {
+        const eff =
+          pref === "system" ? (sysMQ.matches ? "dark" : "light") : pref;
+        body.classList.remove("dark", "light");
+        body.classList.add(eff);
+        btns.forEach((b) =>
+          b.classList.toggle("active", b.dataset.theme === pref),
+        );
+      }
+      function setTheme(pref) {
+        localStorage.setItem("theme", pref);
+        applyTheme(pref);
+      }
+      btns.forEach((b) =>
+        b.addEventListener("click", () => setTheme(b.dataset.theme)),
+      );
+      applyTheme(localStorage.getItem("theme") || "system");
+      sysMQ.addEventListener("change", () => {
+        if ((localStorage.getItem("theme") || "system") === "system")
+          applyTheme("system");
+      });
+
+      const pc = document.getElementById("particles");
+      for (let i = 0; i < 60; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.animationDelay = Math.random() * 20 + "s";
+        p.style.animationDuration = Math.random() * 10 + 15 + "s";
+        pc.appendChild(p);
+      }
+
+      const track = document.getElementById("sliderTrack"),
+        viewport = document.getElementById("sliderViewport"),
+        dotsWrap = document.getElementById("sliderDots");
+      const slides = track.querySelectorAll(".slide"),
+        total = slides.length;
+      let current = 0,
+        startX = 0,
+        isDragging = false,
+        dragDelta = 0;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "slider-dot" + (i === 0 ? " active" : "");
+        dot.onclick = () => goTo(i);
+        dotsWrap.appendChild(dot);
+      });
+
+      function goTo(idx) {
+        idx = Math.max(0, Math.min(total - 1, idx));
+        current = idx;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotsWrap.querySelectorAll(".slider-dot").forEach((d, i) => {
+          d.classList.remove("active", "near", "near2");
+          if (i === current) d.classList.add("active");
+          else if (i === current - 1 || i === current + 1)
+            d.classList.add("near");
+          else if (i === current - 2 || i === current + 2)
+            d.classList.add("near2");
+        });
+      }
+      goTo(0);
+
+      document.getElementById("btnPrev").onclick = () => goTo(current - 1);
+      document.getElementById("btnNext").onclick = () => goTo(current + 1);
+
+      function onStart(x) {
+        startX = x;
+        isDragging = true;
+        dragDelta = 0;
+        track.style.transition = "none";
+      }
+      function onMove(x) {
+        if (!isDragging) return;
+        dragDelta = x - startX;
+        track.style.transform = `translateX(calc(-${current * 100}% + ${dragDelta}px))`;
+      }
+      function onEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = "transform .45s cubic-bezier(.4,0,.2,1)";
+        const threshold = viewport.offsetWidth * 0.2;
+        if (dragDelta < -threshold) goTo(current + 1);
+        else if (dragDelta > threshold) goTo(current - 1);
+        else goTo(current);
+      }
+      viewport.addEventListener("mousedown", (e) => onStart(e.clientX));
+      window.addEventListener("mousemove", (e) => onMove(e.clientX));
+      window.addEventListener("mouseup", onEnd);
+      viewport.addEventListener(
+        "touchstart",
+        (e) => onStart(e.touches[0].clientX),
+        { passive: true },
+      );
+      viewport.addEventListener(
+        "touchmove",
+        (e) => onMove(e.touches[0].clientX),
+        { passive: true },
+      );
+      viewport.addEventListener("touchend", onEnd);
+    </script>
+  </body>
+</html>

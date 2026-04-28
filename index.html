@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Askarindo Integrasi Group - Solusi Teknologi Terintegrasi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="logoaskarindo1-removebg-preview.png">
+    <link href="https://fonts.bunny.net/css?family=montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <style>
+        /* ── ROOT VARIABLES ── */
+        :root {
+            --primary:         #2B7A8C;
+            --primary-light:   #3B96A9;
+            --primary-dark:    #1D5563;
+            --font:            'Montserrat','Mont','Century Gothic','Trebuchet MS',sans-serif;
+            --font-footer:     'Avenir', 'Avenir Next', 'Century Gothic', 'Trebuchet MS', sans-serif;
+            --bg-page:         #000000;
+            --bg-grad-a:       #000000;
+            --bg-grad-b:       #0d3d47;
+            --bg-grad-c:       #000000;
+            --header-bg:       rgba(0,0,0,0.95);
+            --header-border:   rgba(255,255,255,0.08);
+            --nav-mobile-bg:   rgba(0,0,0,0.98);
+            --txt-1:           #ffffff;
+            --txt-2:           #cccccc;
+            --txt-3:           #aaaaaa;
+            --card-bg:         rgba(255,255,255,0.06);
+            --card-border:     rgba(255,255,255,0.10);
+            --card-hover-bg:   rgba(43,122,140,0.12);
+            --card-shadow:     rgba(43,122,140,0.35);
+            --pill-bg:         rgba(255,255,255,0.09);
+            --pill-border:     rgba(255,255,255,0.12);
+            --timeline-line:   #2B7A8C;
+            --timeline-bg:     rgba(255,255,255,0.05);
+            --timeline-bdr:    rgba(255,255,255,0.10);
+            --vm-border:       rgba(255,255,255,0.10);
+            --vm-before:       rgba(255,255,255,0.02);
+            --vm-num:          rgba(255,255,255,0.12);
+            --vm-list-num:     rgba(255,255,255,0.35);
+            --vm-img-label:    rgba(255,255,255,0.50);
+            --marquee-bg:      rgba(0,0,0,0.40);
+            --marquee-border:  rgba(255,255,255,0.08);
+            --slider-btn-bg:   rgba(255,255,255,0.12);
+            --slider-btn-h:    rgba(255,255,255,0.22);
+            --slider-item-bdr: rgba(255,255,255,0.12);
+            --cta-bg:          rgba(43,122,140,0.10);
+            --cta-border:      rgba(43,122,140,0.30);
+            --quote-txt:       rgba(255,255,255,0.80);
+            --quote-bdr:       rgba(255,255,255,0.08);
+            --prog-feat-bdr:   rgba(255,255,255,0.05);
+        }
+        body.light {
+            --bg-page:#ffffff; --bg-grad-a:#ffffff; --bg-grad-b:#f0f0f0; --bg-grad-c:#ffffff;
+            --header-bg:rgba(255,255,255,0.92); --header-border:rgba(0,0,0,0.08);
+            --nav-mobile-bg:rgba(255,255,255,0.99);
+            --txt-1:#0a0a0a; --txt-2:#2a2a2a; --txt-3:#555555;
+            --card-bg:rgba(0,0,0,0.03); --card-border:rgba(0,0,0,0.08);
+            --card-hover-bg:rgba(43,122,140,0.06); --card-shadow:rgba(43,122,140,0.15);
+            --pill-bg:rgba(0,0,0,0.06); --pill-border:rgba(0,0,0,0.10);
+            --timeline-bg:rgba(0,0,0,0.03); --timeline-bdr:rgba(0,0,0,0.08);
+            --vm-border:rgba(0,0,0,0.08); --vm-before:rgba(0,0,0,0.02);
+            --vm-num:rgba(0,0,0,0.10); --vm-list-num:rgba(0,0,0,0.30);
+            --vm-img-label:rgba(0,0,0,0.50);
+            --marquee-bg:rgba(0,0,0,0.04); --marquee-border:rgba(0,0,0,0.08);
+            --slider-btn-bg:rgba(0,0,0,0.08); --slider-btn-h:rgba(0,0,0,0.14);
+            --slider-item-bdr:rgba(0,0,0,0.10);
+            --cta-bg:rgba(43,122,140,0.06); --cta-border:rgba(43,122,140,0.20);
+            --quote-txt:rgba(0,0,0,0.65); --quote-bdr:rgba(0,0,0,0.08);
+            --prog-feat-bdr:rgba(0,0,0,0.06);
+        }
+        @media (prefers-color-scheme:light) {
+            body:not(.dark):not(.light) {
+                --bg-page:#ffffff; --bg-grad-a:#ffffff; --bg-grad-b:#f0f0f0; --bg-grad-c:#ffffff;
+                --header-bg:rgba(255,255,255,0.92); --header-border:rgba(0,0,0,0.08);
+                --nav-mobile-bg:rgba(255,255,255,0.99);
+                --txt-1:#0a0a0a; --txt-2:#2a2a2a; --txt-3:#555555;
+                --card-bg:rgba(0,0,0,0.03); --card-border:rgba(0,0,0,0.08);
+                --card-hover-bg:rgba(43,122,140,0.06); --card-shadow:rgba(43,122,140,0.15);
+                --pill-bg:rgba(0,0,0,0.06); --pill-border:rgba(0,0,0,0.10);
+                --timeline-bg:rgba(0,0,0,0.03); --timeline-bdr:rgba(0,0,0,0.08);
+                --vm-border:rgba(0,0,0,0.08); --vm-before:rgba(0,0,0,0.02);
+                --vm-num:rgba(0,0,0,0.10); --vm-list-num:rgba(0,0,0,0.30);
+                --vm-img-label:rgba(0,0,0,0.50);
+                --marquee-bg:rgba(0,0,0,0.04); --marquee-border:rgba(0,0,0,0.08);
+                --slider-btn-bg:rgba(0,0,0,0.08); --slider-btn-h:rgba(0,0,0,0.14);
+                --slider-item-bdr:rgba(0,0,0,0.10);
+                --cta-bg:rgba(43,122,140,0.06); --cta-border:rgba(43,122,140,0.20);
+                --quote-txt:rgba(0,0,0,0.65); --quote-bdr:rgba(0,0,0,0.08);
+                --prog-feat-bdr:rgba(0,0,0,0.06);
+            }
+        }
+
+        @font-face { font-family: 'Avenir'; src: local('Avenir Next'), local('Avenir'), local('Century Gothic'); font-weight: 300; }
+        @font-face { font-family: 'Avenir'; src: local('Avenir Next Medium'), local('Avenir Medium'), local('Century Gothic'); font-weight: 400 500; }
+        @font-face { font-family: 'Avenir'; src: local('Avenir Next Demi Bold'), local('Avenir Heavy'), local('Century Gothic Bold'); font-weight: 600 700; }
+        @font-face { font-family: 'Avenir'; src: local('Avenir Next Heavy'), local('Avenir Black'), local('Century Gothic Bold'); font-weight: 800 900; }
+
+        /* ── BASE ── */
+        *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:var(--font); background:var(--bg-page); color:var(--txt-1); overflow-x:hidden; transition:background .3s,color .3s; }
+
+        /* ── ANIMATED BG ── */
+        #animated-bg { position:fixed; inset:0; z-index:-1; background:linear-gradient(135deg,var(--bg-grad-a) 0%,var(--bg-grad-b) 50%,var(--bg-grad-c) 100%); background-size:400% 400%; animation:gradientShift 20s ease infinite; transition:background .3s; }
+        @keyframes gradientShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+        /* ── PARTICLES ── */
+        .particles { position:fixed; inset:0; z-index:-1; pointer-events:none; }
+        .particle { position:absolute; width:2px; height:2px; background:rgba(43,122,140,.4); border-radius:50%; animation:floatParticle 25s infinite linear; }
+        @keyframes floatParticle { 0%{transform:translateY(100vh);opacity:0} 10%{opacity:.6} 90%{opacity:.6} 100%{transform:translateY(-100vh) translateX(80px);opacity:0} }
+
+        /* ── HEADER ── */
+        header { position:fixed; top:0; left:0; right:0; height:80px; background:var(--header-bg); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--header-border); z-index:9999; transition:background .3s,border-color .3s; }
+        nav { max-width:1400px; margin:0 auto; height:100%; display:flex; align-items:center; justify-content:space-between; padding:0 40px; gap:20px; }
+        .logo { display:flex; align-items:center; gap:12px; flex-shrink:0; text-decoration:none; }
+        .logo img { height:70px; width:auto; }
+        .logo span { font-family:var(--font); font-size:28px; font-weight:800; background:linear-gradient(135deg,var(--primary),var(--primary-light)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; }
+        .nav-right { display:flex; align-items:center; gap:4px; }
+        .nav-links { display:flex; align-items:center; gap:2px; }
+        .nav-links a { font-family:var(--font); color:var(--txt-2); text-decoration:none; font-weight:500; font-size:15px; padding:8px 14px; border-radius:8px; transition:color .25s,background .25s; white-space:nowrap; }
+        .nav-links a:hover { color:var(--primary-light); }
+        .nav-links a.active { color:var(--primary-light); }
+        .nav-appearance { display:none; }
+        .appearance-toggle { display:flex; align-items:center; gap:3px; background:var(--pill-bg); border:1px solid var(--pill-border); border-radius:999px; padding:4px 5px; flex-shrink:0; transition:background .3s,border-color .3s; }
+        .appearance-btn { width:32px; height:32px; border-radius:50%; border:none; background:transparent; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--txt-3); transition:background .2s,color .2s,box-shadow .2s; }
+        .appearance-btn:hover { background:var(--card-bg); color:var(--txt-1); }
+        .appearance-btn.active { background:#3B96A9; color:#fff; box-shadow:0 2px 10px rgba(59,150,169,.45); }
+        .hamburger { display:none; flex-direction:column; gap:6px; cursor:pointer; z-index:10001; padding:4px; }
+        .hamburger span { display:block; width:26px; height:2.5px; background:var(--txt-1); border-radius:2px; transition:all .35s ease; }
+        .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+        .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+        .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp   { from{opacity:0;transform:translateY(60px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes floatBtn { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+
+        /* ── HERO ── */
+        .hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; background-image:url('784dd277-f2f0-4112-8739-c16767875997 (1).jpg'); background-size:cover; background-position:center; position:relative; }
+        .hero>* { position:relative; z-index:1; }
+        .hero-logo { margin-bottom:-80px; animation:fadeUp 1s ease both; }
+        .hero-logo img { height:400px; width:auto; filter:drop-shadow(0 10px 30px rgba(255,255,255,.35)) drop-shadow(0 0 50px rgba(255,255,255,.2)); }
+        .hero h1 { font-family:var(--font); font-size:clamp(32px,6vw,100px); font-weight:900; line-height:1.1; color:#fff; text-shadow:2px 2px 4px rgba(0,0,0,.3); margin-bottom:10px; animation:fadeUp 1.2s ease both; white-space:nowrap; }
+        .hero p { font-family:var(--font); font-size:28px; font-weight:600; color:#fff; text-shadow:1px 1px 3px rgba(0,0,0,.3); margin-bottom:20px; animation:fadeUp 1.4s ease both; }
+        .hero .cta { font-family:var(--font); padding:18px 50px; background:var(--primary); color:#fff; border-radius:60px; font-size:22px; font-weight:700; text-decoration:none; box-shadow:0 20px 50px rgba(43,122,140,.4); animation:fadeUp 1.6s ease both; transition:all .5s; }
+        .hero .cta:hover { transform:translateY(-10px); background:var(--primary-light); box-shadow:0 30px 70px rgba(43,122,140,.6); }
+
+        /* ── SECTION ── */
+        .section { padding:60px 40px; max-width:1400px; margin:0 auto; }
+        .section-title { font-family:var(--font); text-align:center; font-size:clamp(32px,5vw,60px); font-weight:900; margin-bottom:60px; background:linear-gradient(135deg,var(--txt-1),#2B7A8C); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .section-text { font-family:var(--font); font-size:1.2rem; line-height:1.8; margin-bottom:40px; text-align:justify; color:var(--txt-2); }
+        .section-subtitle { font-family:var(--font); text-align:center; font-size:1.05rem; color:var(--txt-3); max-width:750px; margin:-30px auto 60px; line-height:1.7; }
+
+        /* ── STATS ── */
+        .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0; padding:50px 40px; background:var(--card-bg); border-radius:25px; border:1px solid var(--card-border); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); }
+        .stat-card { text-align:center; padding:20px; }
+        .stat-number { font-family:var(--font); font-weight:900; font-size:clamp(2.5rem,5vw,4rem); background:linear-gradient(135deg,#2B7A8C,#3B96A9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:10px; display:block; }
+        .stat-label { font-family:var(--font); font-size:1rem; color:var(--txt-2); }
+
+        /* ── TIMELINE ── */
+        .timeline { position:relative; padding:40px 0; }
+        .timeline::before { content:''; position:absolute; left:50%; transform:translateX(-50%); width:2px; height:100%; background:linear-gradient(180deg,transparent,var(--timeline-line),transparent); }
+        .timeline-item { display:flex; margin-bottom:60px; position:relative; }
+        .timeline-item:nth-child(odd)  { flex-direction:row; }
+        .timeline-item:nth-child(even) { flex-direction:row-reverse; }
+        .timeline-content { width:45%; background:var(--timeline-bg); padding:30px; border-radius:20px; border:1px solid var(--timeline-bdr); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); transition:all .5s ease; }
+        .timeline-content:hover { transform:translateY(-10px); border-color:var(--primary); background:var(--card-hover-bg); }
+        .timeline-year { position:absolute; left:50%; transform:translateX(-50%); width:80px; height:80px; background:linear-gradient(135deg,#2B7A8C,#3B96A9); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font); font-weight:700; font-size:18px; color:#fff; box-shadow:0 10px 30px rgba(43,122,140,.4); }
+        .timeline-content h3 { font-family:var(--font); font-size:1.5rem; margin-bottom:15px; color:#3B96A9; font-weight:700; }
+        .timeline-content p  { font-family:var(--font); line-height:1.6; color:var(--txt-2); }
+
+        /* ── VISI MISI ── */
+        /* ── VISI MISI (single card layout) ── */
+        .vm-card {
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .vm-top-label {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 22px 40px;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .vm-label-line { flex: 1; height: 1px; background: var(--card-border); }
+        .vm-label-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--txt-3);
+            white-space: nowrap;
+        }
+        .vm-visi-row {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .vm-visi-content { padding: 48px 44px; }
+        .vm2-tag {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .vm2-tag::after {
+            content: '';
+            flex: 1;
+            max-width: 36px;
+            height: 1.5px;
+            background: var(--primary-light);
+        }
+        .vm-visi-big {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(30px, 3.5vw, 46px);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--txt-1);
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+        }
+        .vm-visi-big span { color: var(--primary-light); }
+        .vm-visi-body { font-size: 1.05rem; color: var(--txt-3); line-height: 1.85; }
+        .vm-visi-photo {
+            position: relative;
+            overflow: hidden;
+            border-left: 1px solid var(--card-border);
+        }
+        .vm-visi-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.50) saturate(0.60);
+            transition: filter 0.45s;
+        }
+        .vm-visi-photo:hover img { filter: brightness(0.72) saturate(0.82); }
+        .vm-visi-photo::before {
+            content: '';
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--primary-light));
+            z-index: 2;
+        }
+        .vm-photo-num {
+            position: absolute;
+            bottom: -8px; right: 4px;
+            font-family: 'Syne', sans-serif;
+            font-size: 100px;
+            font-weight: 800;
+            line-height: 1;
+            color: rgba(43,122,140,0.10);
+            pointer-events: none;
+            user-select: none;
+        }
+        .vm-misi-row {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+        .vm-misi-photo {
+            position: relative;
+            overflow: hidden;
+            border-right: 1px solid var(--card-border);
+            min-height: 380px;
+        }
+        .vm-misi-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.48) saturate(0.58);
+            transition: filter 0.45s;
+        }
+        .vm-misi-photo:hover img { filter: brightness(0.70) saturate(0.80); }
+        .vm-misi-photo::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--primary-light));
+            z-index: 2;
+        }
+        .vm-misi-content { padding: 48px 44px; }
+        .vm-misi-big {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(24px, 2.8vw, 36px);
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--txt-1);
+            margin-bottom: 28px;
+            letter-spacing: -0.02em;
+        }
+        .vm-misi-grid { display: flex; flex-direction: column; gap: 12px; }
+        .vm-misi-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            background: var(--card-bg);
+            transition: border-color .3s, background .3s, transform .3s;
+        }
+        .vm-misi-item:hover {
+            border-color: rgba(43,122,140,0.40);
+            background: rgba(43,122,140,0.07);
+            transform: translateX(4px);
+        }
+        .vm-misi-num {
+            font-family: 'Syne', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: rgba(59,150,169,0.32);
+            line-height: 1;
+            flex-shrink: 0;
+            min-width: 26px;
+            padding-top: 1px;
+        }
+        .vm-misi-item p { font-size: 1.05rem; color: var(--txt-3); line-height: 1.72; }
+
+        @media (max-width: 860px) {
+            .vm-visi-row { grid-template-columns: 1fr; }
+            .vm-visi-photo { height: 180px; border-left: none; border-top: 1px solid var(--card-border); }
+            .vm-misi-row { grid-template-columns: 1fr; }
+            .vm-misi-photo { min-height: 160px; border-right: none; border-bottom: 1px solid var(--card-border); }
+            .vm-visi-content, .vm-misi-content { padding: 32px 24px; }
+            .vm-top-label { padding: 18px 24px; }
+        }
+
+        /* ── NILAI UTAMA ── */
+        .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin:0 0 60px; }
+        .value-card { background:var(--card-bg); padding:40px; border-radius:20px; border:1px solid var(--card-border); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); transition:all .5s ease; }
+        .value-card:hover { transform:translateY(-10px); border-color:var(--primary); background:var(--card-hover-bg); }
+        .value-icon { font-size:3rem; color:#3B96A9; margin-bottom:20px; }
+        .value-card h3 { font-family:var(--font); font-size:1.5rem; margin-bottom:15px; color:var(--txt-1); font-weight:700; }
+        .value-card p  { font-family:var(--font); line-height:1.7; color:var(--txt-2); }
+
+        /* ── 3 KONSISTEN BELANJA KAMI ── */
+        .reasons-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0 0 60px;
+        }
+        .reason-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            align-items: center;
+            gap: 28px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 18px;
+            padding: 28px 36px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: border-color .3s, background .3s, transform .3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(43,122,140,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .reason-card:hover {
+            border-color: var(--primary);
+            background: var(--card-hover-bg);
+            transform: translateY(-4px);
+        }
+        /* Kartu genap: ikon di kanan */
+        .reason-card:nth-child(even) {
+            grid-template-columns: 1fr 100px;
+        }
+        .reason-card:nth-child(even) .reason-icon {
+            order: 2;
+        }
+        .reason-card:nth-child(even) .reason-text {
+            order: 1;
+        }
+        .reason-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 18px;
+            background: rgba(43,122,140,0.12);
+            border: 1px solid rgba(43,122,140,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: #3B96A9;
+            flex-shrink: 0;
+            transition: background .3s, transform .3s;
+        }
+        .reason-card:hover .reason-icon {
+            background: rgba(43,122,140,0.22);
+            transform: scale(1.06);
+        }
+        .reason-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .reason-title-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .reason-text h3 {
+            font-family: var(--font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--txt-1);
+            line-height: 1.3;
+            margin: 0 0 15px;
+        }
+        .reason-num {
+            font-family: var(--font);
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--primary-light);
+            opacity: .7;
+            flex-shrink: 0;
+            letter-spacing: .03em;
+        }
+        .reason-text p {
+            font-family: var(--font);
+            font-size: .88rem;
+            color: var(--txt-3);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .reason-card:nth-child(2) {
+         grid-template-columns: 100px 1fr;
+        }
+        .reason-card:nth-child(2) .reason-icon {
+            order: 0;
+        }
+        .reason-card:nth-child(2) .reason-text {
+            order: 1;
+        }
+        
+        @media (max-width: 600px) {
+            .reason-card,
+            .reason-card:nth-child(even) {
+                grid-template-columns: 70px 1fr;
+            }
+            .reason-card:nth-child(even) .reason-icon { order: 0; }
+            .reason-card:nth-child(even) .reason-text { order: 1; }
+            .reason-icon { width: 60px; height: 60px; font-size: 1.5rem; border-radius: 14px; }
+            .reason-card { padding: 20px 18px; gap: 16px; }
+        }
+
+        /* ── PROGRAM UNGGULAN ── */
+        .program-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; margin:0 0 60px; }
+        .program-card { background:var(--card-bg); border-radius:25px; overflow:hidden; border:1px solid var(--card-border); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); transition:all .5s ease; }
+        .program-card:hover { transform:translateY(-15px); border-color:var(--primary); box-shadow:0 25px 60px var(--card-shadow); }
+        .program-header { background:linear-gradient(135deg,#2B7A8C,#3B96A9); padding:40px 30px; text-align:center; }
+        .program-icon { font-size:4rem; color:#fff; margin-bottom:20px; }
+        .program-header h3 { font-family:var(--font); font-size:1.8rem; color:#fff; font-weight:700; }
+        .program-body { padding:35px 30px; }
+        .program-body p { font-family:var(--font); color:var(--txt-2); line-height:1.8; margin-bottom:20px; }
+        .program-features { list-style:none; margin-top:20px; }
+        .program-features li { font-family:var(--font); padding:12px 0; border-bottom:1px solid var(--prog-feat-bdr); color:var(--txt-3); display:flex; align-items:center; gap:15px; }
+        .program-features li:last-child { border-bottom:none; }
+        .program-features i { color:#3B96A9; font-size:1.2rem; flex-shrink:0; }
+
+        /* ── SERTIFIKASI ── */
+        .cert-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:30px; margin:0 0 60px; }
+        .cert-card { background:var(--card-bg); padding:35px; border-radius:20px; border:2px solid var(--card-border); text-align:center; transition:all .4s ease; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); }
+        .cert-card:hover { border-color:#3B96A9; transform:scale(1.05); box-shadow:0 15px 40px var(--card-shadow); }
+        .cert-badge { width:100px; height:100px; margin:0 auto 20px; background:linear-gradient(135deg,#2B7A8C,#3B96A9); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2.5rem; color:#fff; transition:transform .4s cubic-bezier(.34,1.56,.64,1); }
+        .cert-card:hover .cert-badge { transform:scale(1.1) rotate(-5deg); }
+        .cert-card h4 { font-family:var(--font); font-size:1.2rem; margin-bottom:10px; color:var(--txt-1); font-weight:700; }
+        .cert-card p  { font-family:var(--font); color:var(--txt-3); font-size:.9rem; line-height:1.5; }
+
+        /* ── MARQUEE ── */
+        .logo-marquee-wrapper { width:100%; overflow:hidden; background:var(--marquee-bg); padding:24px 0; border-top:1px solid var(--marquee-border); border-bottom:1px solid var(--marquee-border); margin:0 0 60px; }
+        .logo-marquee-track { display:flex; gap:16px; width:max-content; animation:marquee-left 40s linear infinite; align-items:center; padding:0 8px; }
+        .logo-marquee-track:hover { animation-play-state:paused; }
+        .logo-item { display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:12px 20px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:border-color .3s, transform .3s, box-shadow .3s; min-width:120px; }
+        .logo-item:hover { border-color:var(--primary-light); transform:translateY(-4px); box-shadow:0 8px 24px var(--card-shadow); }
+        .logo-item img { height:38px !important; max-width:120px; width:auto; object-fit:contain; opacity:.88; transition:opacity .3s; mix-blend-mode:screen; filter:contrast(1.1) brightness(1.1); }
+        body.light .logo-item img { mix-blend-mode:multiply; filter:contrast(1.1) brightness(.95); }
+        .logo-item:hover img { opacity:1; }
+        @keyframes marquee-left { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+        /* Resize logo instansi */
+       
+        .logo-item img[alt="Dinas Pendidikan"],
+        .logo-item img[alt="Kemenag"],
+        .logo-item img[alt="Kemenhan"]
+        {
+            height: 40px;
+            max-width: 400px;
+        }
+
+        .logo-item img[alt="Taspen"],
+        .logo-item img[alt="Angkasa Pura"],
+        .logo-item img[alt="Kementerian Sosial"] {
+            height: 39px !important;
+            max-width: 140px !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            transform: scale(1.3);
+            transform-origin: center center;
+        }
+
+        /* ── DRAG SLIDER ── */
+        .portofolio-pelanggan { margin-top:20px; }
+        .portofolio-pelanggan-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; }
+        .portofolio-pelanggan-title { font-family:var(--font); font-size:1.6rem; font-weight:800; color:var(--txt-1); opacity:.85; margin:0; }
+        .slider-nav-btns { display:flex; gap:8px; }
+        .slider-nav-btn { width:42px; height:42px; border-radius:50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:18px; background:var(--slider-btn-bg); color:var(--txt-1); transition:all .3s ease; }
+        .slider-nav-btn:hover { transform:scale(1.1); background:var(--slider-btn-h); }
+        .portofolio-drag-track { display:flex; gap:16px; overflow-x:scroll; overflow-y:hidden; cursor:grab; user-select:none; -webkit-overflow-scrolling:touch; scrollbar-width:none; -ms-overflow-style:none; padding-bottom:4px; }
+        .portofolio-drag-track::-webkit-scrollbar { display:none; }
+        .portofolio-drag-track.dragging { cursor:grabbing; }
+        .portofolio-img-item { flex-shrink:0; width:340px; height:220px; border-radius:16px; overflow:hidden; position:relative; border:1px solid var(--slider-item-bdr); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); transition:all .3s ease; }
+        .portofolio-img-item img { width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; transition:transform .4s ease; }
+        .portofolio-img-item:hover { border-color:var(--primary-light); transform:translateY(-6px); box-shadow:0 12px 32px var(--card-shadow); }
+        .portofolio-img-item:hover img { transform:scale(1.04); }
+        .slide-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.78)); padding:20px 14px 12px; font-family:var(--font); font-size:.82rem; font-weight:600; color:#fff; opacity:0; transition:opacity .3s; }
+        .portofolio-img-item:hover .slide-caption { opacity:1; }
+        .portofolio-img-placeholder { width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-size:40px; color:rgba(128,128,128,.25); position:relative; overflow:hidden; background:var(--card-bg); }
+        .portofolio-img-placeholder::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(-45deg,rgba(128,128,128,.03) 0px,rgba(128,128,128,.03) 2px,transparent 2px,transparent 20px); }
+        .customer-quote { text-align:center; margin-top:30px; }
+        .customer-quote hr { border:none; border-top:1px solid var(--quote-bdr); margin:30px 0; }
+        .customer-quote p { font-family:var(--font); color:var(--quote-txt); font-size:.95rem; line-height:1.7; }
+
+        /* ── CTA ── */
+        .cta-section { background:var(--cta-bg); border:1px solid var(--cta-border); border-radius:30px; padding:60px 40px; text-align:center; margin:80px 0; backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); }
+        .cta-section h2 { font-family:var(--font); font-size:clamp(30px,5vw,50px); font-weight:900; margin-bottom:20px; color:var(--txt-1); }
+        .cta-section p  { font-family:var(--font); font-size:1.1rem; color:var(--txt-2); margin-bottom:30px; }
+        .cta-btn { font-family:var(--font); display:inline-block; padding:18px 45px; background:linear-gradient(135deg,#2B7A8C,#3B96A9); color:#fff; border-radius:50px; font-size:18px; font-weight:700; text-decoration:none; box-shadow:0 15px 40px rgba(43,122,140,.4); transition:all .4s ease; }
+        .cta-btn:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(43,122,140,.6); }
+
+        /* ── WHATSAPP ── */
+        .wa-wrapper { position:fixed; bottom:30px; right:30px; display:flex; align-items:center; gap:14px; z-index:9998; }
+        .wa-bubble { position:relative; background:#2B7A8C; color:#fff; padding:13px 18px; border-radius:16px 16px 4px 16px; font-family:var(--font); font-size:13.5px; font-weight:600; line-height:1.5; white-space:nowrap; box-shadow:0 8px 28px rgba(43,122,140,.5); opacity:0; transform:translateX(14px) scale(.9); transform-origin:right center; pointer-events:none; transition:opacity .35s cubic-bezier(.34,1.56,.64,1),transform .35s cubic-bezier(.34,1.56,.64,1); }
+        .wa-bubble::after { content:''; position:absolute; right:-8px; bottom:12px; border-width:6px 0 6px 9px; border-style:solid; border-color:transparent transparent transparent #2B7A8C; }
+        .wa-float { width:70px; height:70px; background:#25d366; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:38px; box-shadow:0 10px 40px rgba(37,211,102,.6); text-decoration:none; flex-shrink:0; animation:floatBtn 3s ease-in-out infinite; transition:transform .3s ease,box-shadow .3s ease; }
+        .wa-wrapper:hover .wa-float { animation:none; transform:scale(1.1); box-shadow:0 14px 50px rgba(37,211,102,.75); }
+        .wa-wrapper:hover .wa-bubble { opacity:1; transform:translateX(0) scale(1); pointer-events:auto; }
+
+        /* ══════════════════════════════════════
+           ── FOOTER — semua warna hardcoded
+              agar tidak berubah di mode terang
+           ══════════════════════════════════════ */
+        footer {
+            background: #000000;
+            border-top: 1px solid rgba(255,255,255,0.12);
+            padding: 80px 40px 30px;
+            margin-top: 100px;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+        }
+        .footer-section h3 {
+            font-family: var(--font-footer);
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2B7A8C, #3B96A9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .footer-section h4 {
+            font-family: var(--font-footer);
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .footer-section p {
+            font-family: var(--font-footer);
+            color: #aaaaaa;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li {
+            font-family: var(--font-footer);
+            margin-bottom: 12px;
+            color: #aaaaaa;
+        }
+        .footer-section ul li a {
+            font-family: var(--font-footer);
+            color: #aaaaaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section ul li a:hover { color: #3B96A9; }
+        .footer-section ul li i {
+            color: #2B7A8C;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #ffffff;
+            background: #2B7A8C;
+            box-shadow: 0 5px 20px rgba(43,122,140,0.4);
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+        .social-icons a:hover { background: #3B96A9; transform: translateY(-8px) scale(1.1); }
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #666666;
+        }
+        .footer-bottom p { font-family: var(--font-footer); margin: 8px 0; font-size: 14px; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width:1024px) {
+            .visi-misi-3col { grid-template-columns:1fr; }
+            .vm-images { flex-direction:row; height:160px; border-right:none; border-bottom:1px solid var(--vm-border); }
+            .vm-images .img-half+.img-half { border-top:none; border-left:1px solid var(--vm-border); }
+            .cert-grid { grid-template-columns:repeat(4,1fr); }
+        }
+        @media (max-width:860px) {
+            .cert-grid { grid-template-columns:repeat(2,1fr); }
+            nav { padding:0 18px; gap:10px; }
+            .nav-links { position:fixed; top:0; left:0; width:100%; height:100vh; background:var(--nav-mobile-bg); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); flex-direction:column; justify-content:center; gap:6px; transform:translateY(-100%); transition:transform .4s ease; z-index:10000; padding-bottom:100px; }
+            .nav-links.open { transform:translateY(0); }
+            .nav-links a { font-size:19px; padding:11px 22px; }
+            .hamburger { display:flex; }
+            .appearance-toggle { display:none; }
+            .nav-appearance { display:flex; position:absolute; bottom:24px; right:24px; align-items:center; gap:3px; background:var(--pill-bg); border:1px solid var(--pill-border); border-radius:999px; padding:4px 5px; }
+            .hero h1 { white-space:normal; }
+            .hero p { font-size:20px; }
+            .timeline::before { left:20px; }
+            .timeline-item { flex-direction:column !important; }
+            .timeline-content { width:100%; margin-left:60px; }
+            .timeline-year { left:20px; transform:none; }
+            .program-grid { grid-template-columns:1fr; }
+            .section { padding:48px 20px; }
+            .cta-section { padding:40px 20px; }
+            .wa-bubble { display:none; }
+        }
+        @media (max-width:768px) {
+            .logo span { font-size:22px; }
+            .logo img  { height:42px; }
+            .footer-content { grid-template-columns:1fr; gap:30px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="animated-bg"></div>
+    <div class="particles"></div>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header>
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="logoaskarindo1-removebg-preview.png" alt="Askarindo Logo">
+                <span>Askarindogroup</span>
+            </a>
+            <div class="nav-right">
+                <div class="nav-links" id="navMenu">
+                    <a href="index.html" class="active">Tentang Kami</a>
+                    <a href="produk.html">Produk</a>
+                    <a href="support.html">Support</a>
+                    <div class="nav-appearance" role="group" aria-label="Pilih tema tampilan">
+                        <button class="appearance-btn" data-theme="light" title="Tema Terang" aria-label="Tema Terang"><i class="fas fa-sun"></i></button>
+                        <button class="appearance-btn" data-theme="dark"  title="Tema Gelap"  aria-label="Tema Gelap"><i class="fas fa-moon"></i></button>
+                        <button class="appearance-btn" data-theme="system" title="Ikut Sistem" aria-label="Ikut Sistem"><i class="fas fa-desktop"></i></button>
+                    </div>
+                </div>
+                <div class="appearance-toggle" role="group" aria-label="Pilih tema tampilan">
+                    <button class="appearance-btn" data-theme="light" title="Tema Terang" aria-label="Tema Terang"><i class="fas fa-sun"></i></button>
+                    <button class="appearance-btn" data-theme="dark"  title="Tema Gelap"  aria-label="Tema Gelap"><i class="fas fa-moon"></i></button>
+                    <button class="appearance-btn" data-theme="system" title="Ikut Sistem" aria-label="Ikut Sistem"><i class="fas fa-desktop"></i></button>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Buka menu">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="beranda" class="hero">
+        <div class="hero-logo">
+            <img src="logoaskarindo1-removebg-preview.png" alt="Askarindo Logo">
+        </div>
+        <h1>Askarindo Integrasi Group</h1>
+        <p>Integrasi Solusi, Membangun Kepercayaan.</p>
+        <a href="produk.html" class="cta">Lihat Produk Kami</a>
+    </section>
+
+    <!-- ═══════════ STATS ═══════════ -->
+    <div class="section">
+        <div class="stats-grid">
+            <div class="stat-card"><span class="stat-number">178+</span><div class="stat-label">Proyek Terselesaikan</div></div>
+            <div class="stat-card"><span class="stat-number">642+</span><div class="stat-label">Tingkat Kepuasan Klien</div></div>
+            <div class="stat-card"><span class="stat-number">1473+</span><div class="stat-label">Repeat Order</div></div>
+            <div class="stat-card"><span class="stat-number">68+</span><div class="stat-label">Stakeholder Eksternal</div></div>
+        </div>
+    </div>
+
+    <!-- ═══════════ TENTANG KAMI ═══════════ -->
+    <section id="tentang-kami" class="section">
+        <h2 class="section-title">Tentang Kami</h2>
+        <div class="section-text">
+            <h3 style="font-family:var(--font);font-size:2rem;font-weight:800;margin-bottom:20px;color:var(--txt-1);">Biografi Perusahaan</h3>
+            <p>Askarindo Integrasi Group adalah perusahaan yang bergerak di bidang teknologi digital dan pengadaan sarana-prasarana modern. Kami menyediakan solusi terintegrasi untuk sektor bisnis, pemerintahan, pendidikan, dan institusi publik, mencakup penyediaan perangkat Hardware/Software, Visual & Display, IT & Computing, AV & Multimedia, Home & Appliance, serta layanan implementasi. Sebagai mitra pengadaan, kami memastikan proses berjalan profesional dan terukur transparan, mulai dari perencanaan, distribusi Pengiriman, administrasi, hingga integrasi sistem dan dukungan purna jual. Askarindo Group, juga mendukung kerja sama secara Sumber Daya Manusia (SDM) hingga Business to Customer (B2C), Business to Goverment (B2G), serta pengadaan pemerintah sesuai regulasi dan standar yang berlaku.</p>
+        </div>
+        <div class="section-text">
+            <h3 style="font-family:var(--font);font-size:2rem;font-weight:800;margin-bottom:20px;color:var(--txt-1);">Tujuan Perusahaan</h3>
+            <p>Askarindo Integrasi Group mengedepankan tanggung jawab kepada stakeholder melalui layanan bisnis berkualitas, transparansi, dan kemitraan jangka panjang. Komitmen ini didukung oleh program Kerjasama yang berfokus pada pendidikan, pengembangan SDM secara Digital, serta kontribusi bisnis simbiosis mutualisme yang berdampak positif.Kami percaya bahwa kolaborasi yang kuat, pengadaan yang tepat, dan kontribusi berkelanjutan merupakan dasar untuk menciptakan pertumbuhan bersama.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ PERJALANAN KAMI ═══════════ -->
+    <section id="perjalanan" class="section">
+        <h2 class="section-title">Perjalanan Kami</h2>
+        <p class="section-subtitle">Berawal dari StartUp, Askarindo Integrasi Group, Berkembang menjadi penyedia solusi teknologi terintegrasi di Indonesia. Kami menghadirkan produk dan layanan yang berkualitas untuk mendukung sektor bisnis dan sektor pendidikan serta memberikan nilai bagi stakeholder dan partner kerjasama yang berkelanjutan.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Lahirnya Visi</h3>
+                    <p>Kami fokus memperkuat posisi di pasar retail dan Online dengan meningkatkan kualitas layanan dan memahami kebutuhan pelanggan. Upaya ini tidak hanya mendorong penjualan, tetapi juga membangun kepercayaan, reputasi, dan fondasi operasional untuk pengembangan ke depan.</p>
+                </div>
+                <div class="timeline-year">2023</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Ekspansi Strategis ke Pendidikan dan Pemerintah</h3>
+                    <p>Memasuki 2024, ini kami diperkuat melalui kerja sama dengan berbagai stakeholder perusahaan swasta serta sektor pendidikan di berbagai wilayah. Kolaborasi ini memungkinkan kami memahami kebutuhan client kami secara lebih tepat, meningkatkan kualitas layanan, dan memperluas jangkauan pemasaran secara efektif.Dengan dukungan jaringan yang solid, kami dapat menghadirkan solusi yang relevan dan berkelanjutan bagi setiap segmen yang dilayani.</p>
+                </div>
+                <div class="timeline-year">2024</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Konsisten dan Komitmen dalam setiap langkah yang berarti</h3>
+                    <p>Perusahaan terus berlanjut melalui penguatan kerja sama di sektor pendidikan hingga pemerintahan. Askarindo Integrasi Group hingga telah terdaftar dalam sistem E-Purchasing pemerintah sebagai perusahaan kena pajak, sehingga mampu mendukung proses pengadaan yang sesuai dengan regulasi yang berlaku.Selain itu, perusahaan secara konsisten meningkatkan intensitas pemasaran produk dan solusi kepada para stakeholder guna memperluas jangkauan layanan serta mendorong pertumbuhan bisnis yang berkelanjutan dan positif.</p>
+                </div>
+                <div class="timeline-year">2025</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Penguatan Program Magang, Edukasi, dan CSR</h3>
+                    <p>Tahun 2026, kami berupaya secara maksimal menjadi perusahaan yang berkontribusi secara sosial dan penguatan nilai perusahaan. Berfokus pada pengembangan program magang pendidikan yang terstruktur dan berdampak positif, sekaligus memperluas edukasi kepada para stakeholder. Melalui inisiatif CSR yang terarah, kami tidak hanya membangun bisnis, tetapi juga membangun ekosistem kolaboratif yang mendukung pertumbuhan bisnis & talenta SDM, secara jangka panjang dan saling menguntungkan.</p>
+                </div>
+                <div class="timeline-year">2026</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ VISI & MISI ═══════════ -->
+<section id="visi-misi" class="section">
+    <h2 class="section-title">Visi &amp; Misi</h2>
+    <p class="section-subtitle">Perusahaan berkomitmen menjadi mitra terpercaya dalam solusi teknologi dan pengadaan. Hal ini diwujudkan melalui penyediaan layanan berkualitas, solusi yang tepat, serta kemitraan jangka panjang di berbagai sektor.</p>
+
+    <div class="vm-card">
+
+        <!-- Label -->
+        <div class="vm-top-label">
+            <div class="vm-label-line"></div>
+            <span class="vm-label-text">Tentang Askarindogroup</span>
+            <div class="vm-label-line"></div>
+        </div>
+
+        <!-- VISI -->
+        <div class="vm-visi-row">
+            <div class="vm-visi-content">
+                <div class="vm2-tag">Visi</div>
+                <h3 class="vm-visi-big">Unggul.<br>Inovatif.<br><span>Berkelanjutan.</span></h3>
+                <p class="vm-visi-body">Menjadi Perusahaan yang unggul dalam penyediaan solusi teknologi dan pengadaan terintegrasi yang inovatif, adaptif, dan berkelanjutan.</p>
+            </div>
+            <div class="vm-visi-photo">
+                <img src="assets/visimisi/pexels-shvetsa-4226122.jpg.jpeg" alt="Foto Visi" onerror="this.parentElement.style.background='linear-gradient(135deg,#1a4a55,#0d3d47)'">
+                <div class="vm-photo-num">01</div>
+            </div>
+        </div>
+
+        <!-- MISI -->
+        <div class="vm-misi-row">
+            <div class="vm-misi-photo">
+                <img src="assets/visimisi/pexels-yankrukov-7793687.jpg.jpeg" alt="Foto Misi" onerror="this.parentElement.style.background='linear-gradient(135deg,#0d3d47,#1a4a55)'">
+                <div class="vm-photo-num">02</div>
+            </div>
+            <div class="vm-misi-content">
+                <div class="vm2-tag">Misi</div>
+                <h3 class="vm-misi-big">Lima Langkah<br>Menuju Dampak Nyata</h3>
+                <div class="vm-misi-grid">
+                    <div class="vm-misi-item"><span class="vm-misi-num">1</span><p>Mengembangkan layanan digital dan teknologi yang inovatif, adaptif, dan relevan dengan kebutuhan.</p></div>
+                    <div class="vm-misi-item"><span class="vm-misi-num">2</span><p>Menyediakan sarana dan prasarana berkualitas yang terintegrasi untuk mendukung operasional mitra.</p></div>
+                    <div class="vm-misi-item"><span class="vm-misi-num">3</span><p>Membangun kemitraan strategis yang profesional, terpercaya, dan berkelanjutan.</p></div>
+                    <div class="vm-misi-item"><span class="vm-misi-num">4</span><p>Memberikan solusi terpadu yang meningkatkan efisiensi, produktivitas, dan pertumbuhan jangka panjang.</p></div>
+                    <div class="vm-misi-item"><span class="vm-misi-num">5</span><p>Menjadikan perusahaan yang dapat bekerjasama dan berkolaborasi di berbagai sektor stakeholder.</p></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- ═══════════ NILAI UTAMA ═══════════ -->
+    <section id="nilai-utama" class="section">
+        <h2 class="section-title">Nilai Utama</h2>
+        <p class="section-subtitle">Landasan nilai yang menjadi komitmen kami dalam setiap langkah pelayanan dan kemitraan</p>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Solusi &amp; Orientasi</h3>
+                <p>Kami menghadirkan produk dan layanan yang dirancang berdasarkan kebutuhan nyata, dengan pendekatan kustomisasi dan hasil yang terukur.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Handal &amp; Berkualitas</h3>
+                <p>Keandalan sistem, kualitas perangkat, dan implementasi profesional menjadi standar utama dalam setiap proyek dan layanan.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-users"></i></div>
+                <h3>Adaptif &amp; Berkelanjutan</h3>
+                <p>Solusi kami dirancang fleksibel, efisien, dan siap berkembang mengikuti perubahan teknologi serta tantangan masa depan.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Dukungan Layanan 24/7</h3>
+                <p>Pendekatan end-to-end: mulai perencanaan, pengadaan, integrasi, instalasi, hingga pemeliharaan dan pendampingan teknis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 3 Konsisten Belanja di Kami ═══════════ -->
+    <section id="konsisten" class="section">
+        <h2 class="section-title">3 Konsisten Belanja di Kami</h2>
+        <p class="section-subtitle">Mengapa pelanggan memilih Askarindo Integrasi Group sebagai mitra utama dalam solusi teknologi dan pengadaan?</p>
+        <div class="reasons-grid">
+    
+            <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-tags"></i></div>
+                <div class="reason-text">
+                    <div class="reason-title-row">
+                        <h3>Harga Kompetitif dengan Nilai Solusi Jelas</h3>
+                    </div>
+                    <p>Penawaran yang diberikan disesuaikan dengan skala kebutuhan—baik untuk individu, institusi, pendidikan, bisnis, maupun pemerintahan—tanpa mengurangi kualitas.</p>
+                </div>
+            </div>
+    
+            <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-file-contract"></i></div>
+                <div class="reason-text">
+                    <div class="reason-title-row">
+                        <h3>Kemudahan Pengadaan dan Kerja Sama Resmi</h3>
+                    </div>
+                    <p>Mendukung proses pembelian melalui skema retail, B2B, proyek instansi, hingga pengadaan pemerintah dengan dokumen dan legalitas lengkap.</p>
+                </div>
+            </div>
+    
+            <div class="reason-card">
+                <div class="reason-icon"><i class="fas fa-envelope-open-text"></i></div>
+                <div class="reason-text">
+                    <div class="reason-title-row">
+                        <h3>One-Stop Service</h3>
+                    </div>
+                    <p>Tidak hanya menjual, tetapi juga menyediakan konsultasi, instalasi, integrasi, hingga layanan purna jual dalam satu alur yang terkoordinasi. Memastikan produk tidak hanya dikirim, tetapi siap digunakan melalui proses instalasi, konfigurasi, dan serah terima yang jelas.</p>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- ═══════════ PROGRAM UNGGULAN ═══════════ -->
+    <section id="program-unggulan" class="section">
+        <h2 class="section-title">Program Unggulan Kami</h2>
+        <p class="section-subtitle">Inisiatif strategis yang dirancang untuk memberdayakan SDM dan meningkatkan akses teknologi di Indonesia</p>
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Pelatihan Teknologi</h3>
+                </div>
+                <div class="program-body">
+                    <p>Program pelatihan komprehensif untuk meningkatkan kompetensi digital guru, siswa, dan profesional di seluruh Indonesia dengan fokus pada teknologi terkini.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Workshop gratis untuk guru setiap bulan</li>
+                        <li><i class="fas fa-check-circle"></i> Pelatihan coding untuk siswa SMA</li>
+                        <li><i class="fas fa-check-circle"></i> Sertifikasi internasional tersedia</li>
+                        <li><i class="fas fa-check-circle"></i> Pembelajaran digital lengkap</li>
+                        <li><i class="fas fa-check-circle"></i> Mentoring dari praktisi industri</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Digital Literacy</h3>
+                </div>
+                <div class="program-body">
+                    <p>Kampanye literasi digital nasional untuk meningkatkan pemahaman masyarakat tentang teknologi, keamanan siber, dan pemanfaatan internet yang bijak.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Seminar online gratis bulanan</li>
+                        <li><i class="fas fa-check-circle"></i> Panduan cybersecurity praktis</li>
+                        <li><i class="fas fa-check-circle"></i> Workshop media sosial sehat</li>
+                        <li><i class="fas fa-check-circle"></i> Materi edukasi orang tua</li>
+                        <li><i class="fas fa-check-circle"></i> Kampanye anti-hoax digital</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-header">
+                    <div class="program-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Community Outreach</h3>
+                </div>
+                <div class="program-body">
+                    <p>Program penjangkauan komunitas untuk membawa teknologi ke daerah terpencil dan membantu transformasi digital UMKM lokal.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Bantuan setup sistem UMKM</li>
+                        <li><i class="fas fa-check-circle"></i> Donasi perangkat ke daerah 3T</li>
+                        <li><i class="fas fa-check-circle"></i> Training e-commerce untuk pelaku usaha</li>
+                        <li><i class="fas fa-check-circle"></i> Konsultasi teknologi gratis</li>
+                        <li><i class="fas fa-check-circle"></i> Partnership dengan komunitas lokal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SERTIFIKASI & STANDAR ═══════════ -->
+    <section id="sertifikasi" class="section">
+        <h2 class="section-title">Sertifikasi &amp; Standar</h2>
+        <p class="section-subtitle">Komitmen kami terhadap standar kualitas internasional dan regulasi pemerintah Indonesia</p>
+        <div class="cert-grid">
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-award"></i></div><h4>ISO 9001:2015</h4><p>Sistem Manajemen Mutu Internasional</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-certificate"></i></div><h4>TKDN Certified</h4><p>Tingkat Komponen Dalam Negeri 40%+</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-shield-alt"></i></div><h4>SNI Compliant</h4><p>Standar Nasional Indonesia</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-check-circle"></i></div><h4>Verified Supplier</h4><p>Partner Resmi Brand Internasional</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-leaf"></i></div><h4>Eco-Friendly</h4><p>Green Business Certification</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-lock"></i></div><h4>Data Security</h4><p>ISO 27001 Information Security</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-recycle"></i></div><h4>Energy Efficiency</h4><p>Sertifikasi Efisiensi Energi</p></div>
+            <div class="cert-card"><div class="cert-badge"><i class="fas fa-globe-asia"></i></div><h4>Global Compliance</h4><p>Kesesuaian Standar Internasional</p></div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PENCAPAIAN & PORTOFOLIO ═══════════ -->
+    <section id="portofolio" class="section">
+        <h2 class="section-title">Pencapaian Kerja &amp; Portofolio Pelayanan</h2>
+        <p class="section-subtitle">Kepercayaan dari berbagai instansi ternama di sektor pemerintahan, BUMN, perbankan, dan swasta menjadi bukti komitmen kami dalam menghadirkan solusi berkualitas dan pelayanan terpercaya.</p>
+
+        <div class="logo-marquee-wrapper">
+            <div class="logo-marquee-track">
+                <div class="logo-item"><img src="assets/instansi/Logo Angkasa Pura.png" alt="Angkasa Pura"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Astra.png" alt="Astra"></div>
+                <div class="logo-item"><img src="assets/instansi/Bank Jatim.png" alt="Bank Jatim"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Bank BCA.png" alt="Bank BCA"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BKD.png" alt="BKD"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPJS Kesehatan.png" alt="BPJS Kesehatan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPJS Ketenagakerjaan.png" alt="BPJS Ketenagakerjaan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPOM.png" alt="BPOM"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BUMN.png" alt="BUMN"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo CIMB Niaga.png" alt="CIMB Niaga"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Dinas Pendidikan.png" alt="Dinas Pendidikan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Disnaker.png" alt="Disnaker"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kemenag.png" alt="Kemenag"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kemenhan.png" alt="Kemenhan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kementerian Kesehatan.png" alt="Kementerian Kesehatan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kementrian Sosial.png" alt="Kementerian Sosial"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kimia Farma.png" alt="Kimia Farma"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Komdigi.webp" alt="Komdigi"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo KOperasi Indonesia.png" alt="Koperasi Indonesia"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Polri.png" alt="Polri"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo POS Indonesia.png" alt="POS Indonesia"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Prudential.png" alt="Prudential"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Ristekdikti.png" alt="Ristekdikti"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Taspen.png" alt="Taspen"></div>
+                <!-- duplikat seamless -->
+                <div class="logo-item"><img src="assets/instansi/Bank Jatim.png" alt="Bank Jatim"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Angkasa Pura.png" alt="Angkasa Pura"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Astra.png" alt="Astra"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Bank BCA.png" alt="Bank BCA"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BKD.png" alt="BKD"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPJS Kesehatan.png" alt="BPJS Kesehatan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPJS Ketenagakerjaan.png" alt="BPJS Ketenagakerjaan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BPOM.png" alt="BPOM"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo BUMN.png" alt="BUMN"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo CIMB Niaga.png" alt="CIMB Niaga"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Dinas Pendidikan.png" alt="Dinas Pendidikan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Disnaker.png" alt="Disnaker"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kemenag.png" alt="Kemenag"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kemenhan.png" alt="Kemenhan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kementerian Kesehatan.png" alt="Kementerian Kesehatan"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kementrian Sosial.png" alt="Kementerian Sosial"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Kimia Farma.png" alt="Kimia Farma"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Komdigi.webp" alt="Komdigi"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo KOperasi Indonesia.png" alt="Koperasi Indonesia"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Polri.png" alt="Polri"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo POS Indonesia.png" alt="POS Indonesia"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Prudential.png" alt="Prudential"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Ristekdikti.png" alt="Ristekdikti"></div>
+                <div class="logo-item"><img src="assets/instansi/Logo Taspen.png" alt="Taspen"></div>
+            </div>
+        </div>
+
+        <div class="portofolio-pelanggan">
+            <div class="portofolio-pelanggan-header">
+                <h3 class="portofolio-pelanggan-title">Portofolio Pekerjaan Terpilih</h3>
+                <div class="slider-nav-btns">
+                    <button class="slider-nav-btn" id="slidePrev">&#8592;</button>
+                    <button class="slider-nav-btn" id="slideNext">&#8594;</button>
+                </div>
+            </div>
+            <div class="portofolio-drag-track" id="dragTrack">
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.46.jpeg" alt="Portofolio 1"></div>
+                    <div class="slide-caption">Instalasi Jaringan &amp; Perangkat Pendidikan – Instansi Pemerintah</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets\portofolio\WhatsApp Image 2026-03-16 at 13.46.47.jpg" alt="Portofolio 2"></div>
+                    <div class="slide-caption">Pengadaan Sarpras Teknologi – Universitas Negeri</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.48.jpeg" alt="Portofolio 3"></div>
+                    <div class="slide-caption">Implementasi Sistem Digital – BUMN</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.48 (1).jpeg" alt="Portofolio 4"></div>
+                    <div class="slide-caption">Proyek Pengadaan Massal – Kementerian</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.48 (2).jpeg" alt="Portofolio 5"></div>
+                    <div class="slide-caption">Solusi Keamanan Jaringan – Perbankan</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.49 (1).jpeg" alt="Portofolio 6"></div>
+                    <div class="slide-caption">Pengadaan Infrastruktur IT – Rumah Sakit Pemerintah</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.49.jpeg" alt="Portofolio 7"></div>
+                    <div class="slide-caption">Deployment Perangkat Komputasi – Dinas Pendidikan</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.50.jpeg" alt="Portofolio 8"></div>
+                    <div class="slide-caption">Modernisasi Sistem Informasi – Pemerintah Daerah</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.50 (1).jpeg" alt="Portofolio 9"></div>
+                    <div class="slide-caption">Pengadaan Perangkat Keras Skala Besar – Lembaga Negara</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.50 (2).jpeg" alt="Portofolio 10"></div>
+                    <div class="slide-caption">Integrasi Sistem &amp; Jaringan – Perusahaan Asuransi</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.51.jpeg" alt="Portofolio 11"></div>
+                    <div class="slide-caption">Pengadaan Workstation – Instansi Pajak &amp; Keuangan</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.51 (1).jpeg" alt="Portofolio 12"></div>
+                    <div class="slide-caption">Proyek Digitalisasi Layanan Publik – Pemerintah Kota</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.51 (2).jpeg" alt="Portofolio 13"></div>
+                    <div class="slide-caption">Penyediaan Perangkat Laboratorium – Politeknik Negeri</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.52 (1).jpeg" alt="Portofolio 14"></div>
+                    <div class="slide-caption">Instalasi CCTV &amp; Sistem Surveilans – Fasilitas Publik</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.52 (2).jpeg" alt="Portofolio 15"></div>
+                    <div class="slide-caption">Pengadaan Server &amp; Penyimpanan Data – Perusahaan Swasta</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.52.jpeg" alt="Portofolio 16"></div>
+                    <div class="slide-caption">Implementasi Solusi Cloud Hybrid – Korporasi Nasional</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.53.jpeg" alt="Portofolio 17"></div>
+                    <div class="slide-caption">Upgrade Infrastruktur Teknologi – Badan Usaha Milik Daerah</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/WhatsApp Image 2026-03-16 at 13.46.53 (1).jpeg" alt="Portofolio 18"></div>
+                    <div class="slide-caption">Penyediaan Solusi Komunikasi Terpadu – Lembaga Pendidikan</div>
+                </div>
+                <div class="portofolio-img-item">
+                    <div class="portofolio-img-placeholder"><img src="assets/portofolio/image.png" alt="Portofolio 19"></div>
+                    <div class="slide-caption">Penyediaan Solusi Komunikasi Terpadu – Lembaga Pendidikan</div>
+                </div>
+            </div>
+            <div class="customer-quote">
+                <hr>
+                <p>"Konsistensi kualitas produk, transparansi proses, dan dukungan purna jual yang handal menjadi alasan utama mengapa berbagai instansi memilih bekerja sama dengan kami secara berkelanjutan."</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <div class="section">
+        <div class="cta-section">
+            <h2>Siap Bertransformasi Bersama Kami?</h2>
+            <p>Mari wujudkan visi digital Anda dengan solusi teknologi terbaik dari Askarindo Integrasi Group</p>
+            <a href="support.html" class="cta-btn">Hubungi Kami Sekarang</a>
+        </div>
+    </div>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Askarindogroup</h3>
+                <p>Penyedia solusi teknologi terintegrasi terpercaya untuk pendidikan, bisnis, dan pemerintahan di Indonesia sejak 2023.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/askarindogroup" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:askarindointegrasigroup@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/6285854542007" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Tentang Kami</a></li>
+                    <li><a href="produk.html">Produk</a></li>
+                    <li><a href="support-kontak.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#layanan">Konsultasi Gratis</a></li>
+                    <li><a href="#layanan">Instalasi &amp; Setup</a></li>
+                    <li><a href="#layanan">Pelatihan Pengguna</a></li>
+                    <li><a href="#garansi">Maintenance</a></li>
+                    <li><a href="#garansi">Garansi &amp; Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +62 858-5454-2007</li>
+                    <li><i class="fas fa-envelope"></i> askarindointegrasigroup@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kota Surabaya, Indonesia</li>
+                    <li><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Askarindogroup. All rights reserved.</p>
+            <p>Solusi Teknologi Terintegrasi untuk Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- ═══════════ WHATSAPP FLOATING ═══════════ -->
+    <div class="wa-wrapper">
+        <div class="wa-bubble">
+            Order &amp; Konsultasi<br>via WhatsApp<br><strong>Klik Di Sini!</strong>
+        </div>
+        <a href="https://wa.me/6285854542007" target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+    /* ── THEME ── */
+    const body  = document.body;
+    const sysMQ = window.matchMedia('(prefers-color-scheme: dark)');
+    const btns  = document.querySelectorAll('.appearance-btn');
+    function applyTheme(pref) {
+        const eff = pref === 'system' ? (sysMQ.matches ? 'dark' : 'light') : pref;
+        body.classList.remove('dark','light');
+        body.classList.add(eff);
+        btns.forEach(b => b.classList.toggle('active', b.dataset.theme === pref));
+    }
+    function setTheme(pref) { localStorage.setItem('theme', pref); applyTheme(pref); }
+    btns.forEach(b => b.addEventListener('click', () => setTheme(b.dataset.theme)));
+    applyTheme(localStorage.getItem('theme') || 'system');
+    sysMQ.addEventListener('change', () => {
+        if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system');
+    });
+
+    /* ── PARTICLES ── */
+    const pc = document.querySelector('.particles');
+    for (let i = 0; i < 60; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left              = Math.random() * 100 + '%';
+        p.style.animationDelay    = Math.random() * 25 + 's';
+        p.style.animationDuration = (Math.random() * 15 + 20) + 's';
+        pc.appendChild(p);
+    }
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+    function toggleMenu(f) {
+        const open = f !== undefined ? f : !navMenu.classList.contains('open');
+        hamburger.classList.toggle('open', open);
+        navMenu.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu());
+    hamburger.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' ') toggleMenu(); });
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+
+    /* ── SMOOTH SCROLL ── */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const el = document.querySelector(this.getAttribute('href'));
+            if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth', block:'start' }); }
+        });
+    });
+
+    /* ── SCROLL REVEAL ── */
+    const revealObs = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+            if (en.isIntersecting) {
+                en.target.style.opacity   = '1';
+                en.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.timeline-item, .value-card, .program-card, .cert-card').forEach(el => {
+        el.style.opacity    = '0';
+        el.style.transform  = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        revealObs.observe(el);
+    });
+
+    /* ── COUNTER ANIMATION ── */
+    const statsObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const numEl  = entry.target.querySelector('.stat-number');
+                const target = parseInt(numEl.textContent);
+                let current  = 0;
+                const inc    = target / 100;
+                const timer  = setInterval(() => {
+                    current += inc;
+                    if (current >= target) { numEl.textContent = target + '+'; clearInterval(timer); }
+                    else { numEl.textContent = Math.floor(current) + '+'; }
+                }, 20);
+                statsObs.unobserve(entry.target);
+            }
+        });
+    });
+    document.querySelectorAll('.stat-card').forEach(card => statsObs.observe(card));
+
+    /* ── DRAG SLIDER ── */
+    const dragTrack = document.getElementById('dragTrack');
+    document.getElementById('slidePrev').addEventListener('click', () => dragTrack.scrollBy({ left:-380, behavior:'smooth' }));
+    document.getElementById('slideNext').addEventListener('click', () => dragTrack.scrollBy({ left: 380, behavior:'smooth' }));
+    let isDown = false, startX, scrollLeft;
+    dragTrack.addEventListener('mousedown',  e  => { isDown=true;  dragTrack.classList.add('dragging');    startX=e.pageX-dragTrack.offsetLeft; scrollLeft=dragTrack.scrollLeft; });
+    dragTrack.addEventListener('mouseleave', () => { isDown=false; dragTrack.classList.remove('dragging'); });
+    dragTrack.addEventListener('mouseup',    () => { isDown=false; dragTrack.classList.remove('dragging'); });
+    dragTrack.addEventListener('mousemove',  e  => { if(!isDown)return; e.preventDefault(); dragTrack.scrollLeft=scrollLeft-(e.pageX-dragTrack.offsetLeft-startX)*1.5; });
+    dragTrack.addEventListener('touchstart', e  => { startX=e.touches[0].pageX-dragTrack.offsetLeft; scrollLeft=dragTrack.scrollLeft; });
+    dragTrack.addEventListener('touchmove',  e  => { dragTrack.scrollLeft=scrollLeft-(e.touches[0].pageX-dragTrack.offsetLeft-startX)*1.5; });
+
+    /* ── ACTIVE NAV ── */
+    (function() {
+        const page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            if (a.getAttribute('href') === page) a.classList.add('active');
+        });
+    })();
+    </script>
+</body>
+</html>
